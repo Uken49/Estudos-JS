@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alert</title>
     <style>
-        body {
+        body{
             background-color: beige;
             color: rgb(53, 52, 52);
             font: normal 10pt 'Trebuchet MS';
         }
     </style>
 </head>
-
 <body>
     <h1>Olá Mundo!</h1>
     <p>Conteúdo daora.</p>
     <script>
-        // O 'window' pode ser omitido, ficando apenas alert,confirm e prompt
-        window.alert('Minha primeira mensagem') // Janela com uma mensagem
-        window.confirm('Esse é o primeiro de muitos arquivos JS') // Janela com botão 'OK' e 'Cancelar'
-        var nome = window.prompt('Qual é o seu nome?') // Janela com caixa para escrever
-        window.alert('É um grande prazer te conhecer,' + nome + '!') //Vai
+        var n1 = Number.parseFloat(window.prompt('Digite um número: ')) //Convertendo o texto em número
+        var n2 = Number.parseFloat(window.prompt('Digite outro número: '))
+        /*
+        Colocar 'Number(n)' faz com que ele defina se é float ou int automáticamente
+        String(n) converte para String
+        n.toString() consigo jogar em uma outra váriavel
+        */
+        var s = n1+n2
+        alert(`A soma entre ${n1} e ${n2} é igual a ${s}`)
     </script>
 </body>
-
 </html>
