@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background-color: beige;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p id="pagMsg">Aprendendo a usar o <strong>DOM</strong> em JavaScript </p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        /*
+        window.document.write(window.document.URL) Imprimindo na tela a URL.
+        Pegando o elemento pela 'Tag HTML' :
+        */
+        var p1 = window.document.getElementsByTagName('p')[0] //Acessando a primeira tag <p> do HTML.
+        window.document.write('Está escrito assim: '+ p1.innerText) //Adicionando texto na tag <p>.
+        p1.style.color = 'red' //Mudando o style do <p>
+
+        /*
+        innerText : Puxa apenas o texto do elemento.
+        innerHTML : Puxa o código HTML do elemento, inclusive as tags filhas.
+        Pegando o elemento pelo 'Id':
+        */
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        
+        //Pegando o elemento pelo 'Seletor':
+        var d = window.document.querySelector('div#msg')
+        d.style.background = 'blue'
+        d.innerText = 'Estou aguardando'
+        
+        //Outra opção de código:
+        document.getElementById('pagMsg').innerText = 'JavaScript não tem haver com Java'
+        
+    </script>
+</body>
+</html>
