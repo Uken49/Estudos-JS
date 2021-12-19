@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fronteira</title>
+    <style>
+        body{
+            font: normal 17pt Arial;
+        }
+        input{
+            border-radius: 5cm;
+        }
+        p{
+            margin: 4px 0 0 0 ;
+        }
+    </style>
+</head>
+<body>
+    Seu país de origem: <input type="text" id="txPais">
+    <input type="button" value="Verificar" id="btn1">
+    <div id="res"></div>
+
+    <script>
+        var btn1 = document.querySelector('input#btn1')
+        btn1.addEventListener('click', observacao)
+
+        function observacao(){
+            var pais = document.querySelector('input#txPais').value
+            var res = document.querySelector('div#res')
+            res.innerText = `Vivendo em ${pais}: `
+            if (pais == 'Brasil') {
+                res.innerHTML +='Você é um <strong>brasileiro</strong>.</p>'
+            }else{
+                res.innerHTML += 'Você é um <strong>estrangeiro</strong>.</p>'
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+<!-- var pais = 60.5
+console.log(`Vivendo em ${pais}`);
+if (pais == 'Brasil') {
+    console.log(`Você é Brasileiro!`);
+}else{
+    console.log(`Você é Estrangeiro!`);
+} -->
