@@ -23,7 +23,6 @@ function verificar() {
                 gênero = 'idoso'
                 img.setAttribute('src', 'homemIdoso.png')
             }
-
         } else if (fsex[1].checked) {
             if (idade < 18) {
                 gênero = 'jovem'
