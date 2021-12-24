@@ -19,6 +19,5 @@ function contar() {
             }
         }
         res.innerHTML += String.fromCodePoint(127937);
-
     }
 }
