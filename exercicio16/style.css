@@ -17,6 +17,9 @@ section{
 div{
     padding: 8px auto;
 }
+div#res{
+    margin: 8px 0px 0px auto;
+}
 footer{
     color: white;
     text-align: center;
